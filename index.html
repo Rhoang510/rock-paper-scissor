@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Number guessing game</title>
+
+</body>
+
+<script>
+  let userScore = parseInt(0);
+  let computerScore = parseInt(0);
+
+  function userChoice(){
+    const userChoice = prompt("Do you want to choose rock, paper, or scissors?").toLowerCase();
+   return userChoice;
+    }
+
+  function computerPlay() {
+    let computerPlay = Math.random();
+    if (computerPlay < 0.34) {
+      return "rock";
+      } else if (computerPlay <= 0.67) {
+      return "paper";
+      } else {
+      return "scissors";
+    }
+  }
+  function playRound( userChoice, computerPlay) {
+    // Rock Choice
+    if (userChoice == "rock" && computerPlay == "scissors") {
+      userScore++;
+      return "You win! Rock beats scissors!";
+    } else if (userChoice == "rock" && computerPlay == "paper") {
+      computerScore++;
+      return "You lose! Scissors beats rock";
+    } else if (userChoice === computerPlay) {
+      return "It's a draw!";
+    }
+    // Paper Choice
+    else if (userChoice == "paper" && computerPlay == "rock") {
+      userScore++;
+      return "You win! Paper beats rock";
+    } else if (userChoice == "paper" && computerPlay == "scissors") {
+      computerScore++;
+      return "You lose! Scissors beat paper!";
+    } else if (userChoice === computerPlay) {
+      return "It's a draw!";
+    }
+    // Scissors Choice
+    else if (userChoice == "scissors" && computerPlay == "rock") {
+      computerScore++;
+      return "You lose! Rock beats scissors";
+    } else if (userChoice == "scissors" && computerPlay == "paper") {
+      userScore++;
+      return "You win! Scissor beats rock!";
+    } else if (userChoice === computerPlay) {
+      return "It's a draw!";
+    } else {
+      return "Error, please choose rock, paper, or scissors";
+    }
+
+    function game() {
+
+    }
+
+  }
+
+console.log(playRound(userChoice(), computerPlay()));
+console.log("your score = " + userScore);
+console.log("Computer's score = " + computerScore);
+</script>
+</html>
