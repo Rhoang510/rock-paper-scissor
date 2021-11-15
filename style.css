@@ -12,8 +12,10 @@ header {
     color: white;
 }
 
-.results {
-    height: 150px;
+#results {
+    font-size: 24px;
+    color: white;
+    padding-top: 30px;
 }
 
 #button {
@@ -32,6 +34,7 @@ header {
     justify-content: space-between;
     border: none;
     padding: 0;
+    background: none;
     background-color: rgb(56, 55, 55);
 }
 #button img{

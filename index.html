@@ -9,7 +9,7 @@
  <header>
     <h1>Rock, Paper, Scissors Game</h1>
 </header>
-  <div class="results">
+  <div id="results">
     <p></p>
   </div>
   <div id="button">
@@ -24,11 +24,14 @@
     </div>
   </div>
   <div id="scores">
-     <div class="userScore">
+     <div>
        <p>Player Score : </p>
+       <p id="humanScore">0</p>
      </div>
-     <div class="computerScore">
-       <p>Computer Score: </p>
+     <button id="reset">Reset</button>
+     <div>
+       <p>Computer Score : </p>
+       <p  id="compScore">0</p>
      </div>
   </div>
 </body>
