@@ -6,26 +6,31 @@
     <script type="text/javascript" src="game.js" defer></script>
     <title>Number guessing game</title>
 <body>
- <header>
-    <h1>Rock, Paper, Scissors Game</h1>
-</header>
+  <div>
+    <div class="header">
+        <img class="logo" src="image/logo.png" alt="logo">
+       <h1>Rock, Paper, Scissors Game</h1>
+    </div>
+</div>
   <div id="results">
     <p>Please choose rock,paper or scissor</p>
   </div>
   <div id="button">
-      <button id="rock"><img src= "image/rock.png" alt="rock"></button>
-      <button id="paper"><img src="image/paper.png" alt="paper"></button>
-      <button id="scissors"><img src="image/scissor.png" alt="scissor"></button>
+      <button id="rock" class="button"><img src= "image/rock.png" alt="rock"></button>
+      <button id="paper" class="button"><img src="image/paper.png" alt="paper"></button>
+      <button id="scissors" class="button"><img src="image/scissor.png" alt="scissor"></button>
   </div>
   <div id="scores">
-     <div>
-       <p>Player Score : </p>
-       <p id="humanScore">0</p>
+     <div class="score">
+       <p>Player Score</p>
+       <p id="humanScore" class="points">0</p>
      </div>
-     <button id="reset">Reset</button>
      <div>
-       <p>Computer Score : </p>
-       <p id="compScore">0</p>
+      <button id="reset">Reset</button>
+    </div>
+     <div class="score">
+       <p>Computer Score</p>
+       <p id="compScore" class="points">0</p>
      </div>
   </div>
  <div class="container">

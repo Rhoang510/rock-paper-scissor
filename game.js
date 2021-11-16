@@ -28,8 +28,6 @@
       results.textContent = "You have restarted the game.";
   });
 
- 
-
   function computerPlay() {
     let computerPlay = Math.random();
     if (computerPlay < 0.34) {
@@ -40,6 +38,7 @@
       return "scissors";
     }
   }
+
   function playRound(userChoice, computerChoice) {
     // Rock Choice
     if (userChoice == "rock" && computerChoice == "scissors") {
@@ -86,8 +85,16 @@
     } else if (userScore < computerScore) {
       return results.textContent = "Sorry, you lost the game.";
     }
-
   }
+
+  function gameOver() {
+    if (userScore === 5 || computerScore === 5) {
+      return winCondition();
+    } else {
+    }
+  }
+
+  console.log(gameOver());
 
 
   
