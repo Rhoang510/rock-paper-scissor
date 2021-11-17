@@ -1,4 +1,3 @@
-  
   let userScore = 0;
   let computerScore = 0;
   const buttons = document.querySelectorAll("button");
@@ -6,13 +5,15 @@
   const compScore = document.querySelector("#compScore");
   const reset = document.querySelector("#reset");
   const results = document.getElementById("results");
+  const restart = document.getElementById("restart");
 
+  // Buttons 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const userChoice = button.id;
       const computerChoice = computerPlay();
       if (userScore === 5 || computerScore === 5) {
-        return winCondition(); 
+        winCondition(); 
       } else {
         playRound(userChoice, computerChoice);
       }
@@ -24,6 +25,7 @@
       computerScore = 0;
       compScore.textContent = 0;
       humanScore.textContent = 0;
+      restart.textContent = "";
       results.removeAttribute("style");
       results.textContent = "You have restarted the game.";
   });
@@ -44,57 +46,59 @@
     if (userChoice == "rock" && computerChoice == "scissors") {
       userScore++;
       humanScore.textContent = userScore;
-      return results.textContent = "You win! Rock beats scissors!";
+      results.textContent = "You win! Rock beats scissors!";
     } else if (userChoice == "rock" && computerChoice == "paper") {
       computerScore++;
       compScore.textContent = computerScore;
-      return results.textContent = "You lose! Scissors beats rock";
+      results.textContent = "You lose! Scissors beats rock";
     }
     // Paper Choice
     else if (userChoice == "paper" && computerChoice == "rock") {
       userScore++;
       humanScore.textContent = userScore;
-      return results.textContent = "You win! Paper beats rock";
+      results.textContent = "You win! Paper beats rock";
     } else if (userChoice == "paper" && computerChoice == "scissors") {
       computerScore++;
       compScore.textContent = computerScore;
-      return results.textContent = "You lose! Scissors beat paper!";
+      results.textContent = "You lose! Scissors beat paper!";
     }
     // Scissors Choice
     else if (userChoice == "scissors" && computerChoice == "rock") {
       computerScore++;
       compScore.textContent = computerScore;
-      return results.textContent = "You lose! Rock beats scissors";
+      results.textContent = "You lose! Rock beats scissors";
     } else if (userChoice == "scissors" && computerChoice == "paper") {
       userScore++;
       humanScore.textContent = userScore;
-      return results.textContent = "You win! Scissor beats rock!";
+      results.textContent = "You win! Scissor beats rock!";
     } 
       // Tie
-    else if (userChoice === computerChoice) {
-      return results.textContent = "It's a draw!";
+    else {
+      results.textContent = "It's a draw!";
     }
+    gameOver();
   }
      // End game alert
   function winCondition() {
     results.style.color = "red";
     results.style.fontSize = "40px";
     results.style.fontWeight = "bold";
-    if (userScore > computerScore) {
-    return results.textContent = "Congrats! You win the game!!!";
-    } else if (userScore < computerScore) {
-      return results.textContent = "Sorry, you lost the game.";
+    if (userScore === 5) {
+      results.textContent = "Congrats! You win the game!!!";
+      restart.textContent = "Please click on reset to restart the game."
+    } else if (computerScore === 5) {
+       results.textContent = "Sorry, you lost the game.";
+       restart.textContent = "Please click on reset to restart the game."
     }
   }
 
   function gameOver() {
     if (userScore === 5 || computerScore === 5) {
-      return winCondition();
+      return winCondition()
     } else {
     }
   }
 
-  console.log(gameOver());
 
 
   
