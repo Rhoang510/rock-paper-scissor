@@ -27,7 +27,8 @@ body{
     left: 0;
     padding: 15px;
     margin: 20px;
-    border: 2px solid ;
+    border: 2px solid yellow;
+    box-shadow: 0 0 5px black;
     border-radius: 50%;
 }
 
@@ -45,6 +46,7 @@ body{
     font-family: "Courier New";  
     color: white;
     height: 100px;
+    transition: 0.5s ease-in-out;
 }
 
 #reset{
@@ -54,6 +56,12 @@ body{
     border-radius: 10px;
     font-weight: bold;
     font-size: 16px;
+}
+
+#reset:hover {
+    border: 2px solid black;
+    box-shadow: 0 0 5px yellow;
+    transform: scale(1.1)
 }
 
 #button {
@@ -67,6 +75,12 @@ body{
     gap: 80px;
     border-radius: 2px;
     border: 2px solid;
+}
+
+.button:hover {
+    border: 3px solid yellow;
+    box-shadow: 0 0 25px yellow;
+    transform: scale(1.1);
 }
 
 #button img {
@@ -85,6 +99,7 @@ body{
     color: white;
     text-align: center;
     height: 10px;
+    transition: 0.5s ease-in-out;
 
 }
 #scores {

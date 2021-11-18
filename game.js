@@ -85,18 +85,17 @@
     results.style.fontWeight = "bold";
     if (userScore === 5) {
       results.textContent = "Congrats! You win the game!!!";
-      restart.textContent = "Please click on reset to restart the game."
+      restart.textContent = "Please click on reset to restart the game.";
     } else if (computerScore === 5) {
        results.textContent = "Sorry, you lost the game.";
-       restart.textContent = "Please click on reset to restart the game."
+       restart.textContent = "Please click on reset to restart the game.";
     }
   }
 
   function gameOver() {
     if (userScore === 5 || computerScore === 5) {
-      return winCondition()
-    } else {
-    }
+      return winCondition();
+    } 
   }
 
 
