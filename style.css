@@ -1,18 +1,26 @@
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
 body{
     display: flex;
     flex-direction: column;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(55,56,56);
+    background-color: #0f1d33;
 }
 
 .header {
+    background: #4a4f57;
     display: flex;
     justify-content: center;
-    background-color: #1F2937;;
+    align-items: center;
     color: white;
-    height: 100px;
+    height: 125px;
     gap: 20px;
+    border-bottom: 2px solid black;
 }
 
 #title {
@@ -21,24 +29,24 @@ body{
 }
 
 #logo {
-    background: black;
+    background: white;
     position: fixed;
     top: 0;
     left: 0;
     padding: 15px;
     margin: 20px;
-    border: 2px solid yellow;
-    box-shadow: 0 0 5px black;
+    border: 1px solid black;
     border-radius: 50%;
 }
 
 .logo {
-    height: 150px;
-    width: 150px;
+    height: 80px;
+    width: 80px;
     padding: 10px;
 }
 
 #results {
+    background: #1F2937;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,10 +54,10 @@ body{
     font-family: "Courier New";  
     color: white;
     height: 100px;
-    transition: 0.5s ease-in-out;
+    transition: all 1s ease;
 }
 
-#reset{
+.reset{
     height: 40px;
     width: 100px;
     border: 2px solid;
@@ -58,23 +66,21 @@ body{
     font-size: 16px;
 }
 
-#reset:hover {
+.reset:hover {
     border: 2px solid black;
     box-shadow: 0 0 5px yellow;
-    transform: scale(1.1)
+    transform: scale(1.1);
 }
 
 #button {
+    background: #1F2937;
     display: flex;
     justify-content: center;
     align-items:center;
-    background: black;
     margin: 0px;
     padding: 0px;
-    height: 300px;
+    height: 250px;
     gap: 80px;
-    border-radius: 2px;
-    border: 2px solid;
 }
 
 .button:hover {
@@ -84,8 +90,8 @@ body{
 }
 
 #button img {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     padding: 20px;
 }
 
@@ -99,40 +105,47 @@ body{
     color: white;
     text-align: center;
     height: 10px;
-    transition: 0.5s ease-in-out;
+    transition: 1s ease-in-out;
 
 }
 #scores {
+    background: #0f1d33;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 30px;
-    gap: 200px;
-    height: 250px;
+    gap: 150px;
+    height: 200px;
     padding: 10px;
 }
 
 .score {
-    background: #1F2937;
+    background: #4a4f57;
     border-radius: 30px;
     border: 2px solid black;
     padding: 10px;
     text-align: center;
+    height: 175px;
 }
 
 .points {
     font-size: 40px;
+    transition: all 1s ease;
 }
 
 .container {
+    position: absolute;
+    bottom: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 .follow {
-    width: 950px;
+    width: 800px;
     height: 80px;
     background-color: #3882F6;
     display: flex;
@@ -156,10 +169,13 @@ body{
 }
 /* footer */
 .footer {
-    background-color: #1F2937;
     color: white;
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
+    width: 100%;
+    padding: 0;
 }

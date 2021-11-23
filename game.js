@@ -6,6 +6,7 @@
   const reset = document.querySelector("#reset");
   const results = document.getElementById("results");
   const restart = document.getElementById("restart");
+  const restartButton = document.querySelector(".reset");
 
   // Buttons 
   buttons.forEach((button) => {
@@ -13,14 +14,14 @@
       const userChoice = button.id;
       const computerChoice = computerPlay();
       if (userScore === 5 || computerScore === 5) {
-        winCondition(); 
+        gameOver();
       } else {
         playRound(userChoice, computerChoice);
       }
     });
   });
 
-  reset.addEventListener("click", () => {
+  restartButton.addEventListener("click", () => {
       userScore = 0;
       computerScore = 0;
       compScore.textContent = 0;
@@ -29,7 +30,8 @@
       results.removeAttribute("style");
       results.textContent = "You have restarted the game.";
   });
-
+  
+// GAME FUNCTION
   function computerPlay() {
     let computerPlay = Math.random();
     if (computerPlay < 0.34) {
@@ -84,10 +86,10 @@
     results.style.fontSize = "40px";
     results.style.fontWeight = "bold";
     if (userScore === 5) {
-      results.textContent = "Congrats! You win the game!!!";
+      results.textContent = "Congratulations! You win!!!";
       restart.textContent = "Please click on reset to restart the game.";
     } else if (computerScore === 5) {
-       results.textContent = "Sorry, you lost the game.";
+       results.textContent = "Sorry, you lost.";
        restart.textContent = "Please click on reset to restart the game.";
     }
   }
@@ -98,6 +100,7 @@
     } 
   }
 
+  
 
 
   
