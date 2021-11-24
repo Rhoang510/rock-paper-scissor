@@ -3,18 +3,21 @@
   const buttons = document.querySelectorAll("button");
   const humanScore = document.querySelector("#humanScore");
   const compScore = document.querySelector("#compScore");
-  const reset = document.querySelector("#reset");
-  const results = document.getElementById("results");
-  const restart = document.getElementById("restart");
-  const restartButton = document.querySelector(".reset");
-
+  const endGame = document.querySelector("#endGame");
+  const results = document.querySelector("#results");
+  const restart = document.querySelector("#restart");
+  const restartButton = document.querySelector(".resetBtn");
+  
   // Buttons 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const userChoice = button.id;
       const computerChoice = computerPlay();
       if (userScore === 5 || computerScore === 5) {
-        gameOver();
+        results.style.color = "red";
+        results.style.fontSize = "40px";
+        results.style.fontWeight = "bold";
+        winCondition();
       } else {
         playRound(userChoice, computerChoice);
       }
@@ -78,13 +81,10 @@
     else {
       results.textContent = "It's a draw!";
     }
-    gameOver();
+    winCondition();
   }
      // End game alert
   function winCondition() {
-    results.style.color = "red";
-    results.style.fontSize = "40px";
-    results.style.fontWeight = "bold";
     if (userScore === 5) {
       results.textContent = "Congratulations! You win!!!";
       restart.textContent = "Please click on reset to restart the game.";
@@ -93,15 +93,6 @@
        restart.textContent = "Please click on reset to restart the game.";
     }
   }
-
-  function gameOver() {
-    if (userScore === 5 || computerScore === 5) {
-      return winCondition();
-    } 
-  }
-
-  
-
 
   
 
