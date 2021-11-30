@@ -3,7 +3,6 @@
   const buttons = document.querySelectorAll("button");
   const humanScore = document.querySelector("#humanScore");
   const compScore = document.querySelector("#compScore");
-  const endGame = document.querySelector("#endGame");
   const results = document.querySelector("#results");
   const restart = document.querySelector("#restart");
   const restartButton = document.querySelector(".resetBtn");
@@ -14,9 +13,6 @@
       const userChoice = button.id;
       const computerChoice = computerPlay();
       if (userScore === 5 || computerScore === 5) {
-        results.style.color = "red";
-        results.style.fontSize = "40px";
-        results.style.fontWeight = "bold";
         winCondition();
       } else {
         playRound(userChoice, computerChoice);
@@ -86,14 +82,21 @@
      // End game alert
   function winCondition() {
     if (userScore === 5) {
+      endGameBanner();
       results.textContent = "Congratulations! You win!!!";
       restart.textContent = "Please click on reset to restart the game.";
     } else if (computerScore === 5) {
+      endGameBanner();
        results.textContent = "Sorry, you lost.";
        restart.textContent = "Please click on reset to restart the game.";
     }
   }
 
-  
+  function endGameBanner() {
+    results.style.color = "red";
+    results.style.fontSize = "40px";
+    results.style.fontWeight = "bold";
+  }
+
 
  
