@@ -6,6 +6,7 @@
   const results = document.querySelector("#results");
   const restart = document.querySelector("#restart");
   const restartButton = document.querySelector(".resetBtn");
+  const endGame = document.querySelector("#endGame")
   
   // Buttons 
   buttons.forEach((button) => {
@@ -13,7 +14,7 @@
       const userChoice = button.id;
       const computerChoice = computerPlay();
       if (userScore === 5 || computerScore === 5) {
-        winCondition();
+        return ;
       } else {
         playRound(userChoice, computerChoice);
       }
@@ -98,5 +99,10 @@
     results.style.fontWeight = "bold";
   }
 
+  function overlay() {
+    endGame.classList.remove("resetBtn")
+  }
+
+  overlay();
 
  

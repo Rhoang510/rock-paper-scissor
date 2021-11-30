@@ -65,9 +65,13 @@ body{
     font-size: 16px;
 }
 
+.resetBtn:active {
+    transition: all 0.1s ease;
+    transform: translate(2px, 2px);
+}
+
 .resetBtn:hover {
-    box-shadow: 0 0 5px white;
-    transform: scale(1.1);
+    box-shadow: 0 0 2px white;
 }
 
 #button-container {
@@ -93,8 +97,9 @@ body{
 }
 
 .button:active {
-    background-color: #3882F6;
+    background-color: #8bb0ec;
     transition: all 0.1s ease;
+    transform: translate(4px, 4px);
   }
 
 .button:hover {
