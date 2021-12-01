@@ -99,10 +99,5 @@
     results.style.fontWeight = "bold";
   }
 
-  function overlay() {
-    endGame.classList.remove("resetBtn")
-  }
-
-  overlay();
 
  

@@ -67,11 +67,11 @@ body{
 
 .resetBtn:active {
     transition: all 0.1s ease;
-    transform: translate(2px, 2px);
+    transform: translate(1px, 1px);
 }
 
 .resetBtn:hover {
-    box-shadow: 0 0 2px white;
+    box-shadow: 0 0 5px white;
 }
 
 #button-container {
@@ -99,7 +99,7 @@ body{
 .button:active {
     background-color: #8bb0ec;
     transition: all 0.1s ease;
-    transform: translate(4px, 4px);
+    transform: translate(3px, 3px);
   }
 
 .button:hover {
@@ -178,7 +178,7 @@ body{
     transform: scale(1.1);
 }
 /* footer */
-.footer {
+footer {
     color: white;
     position: absolute;
     bottom: 0;
