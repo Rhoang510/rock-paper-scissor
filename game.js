@@ -6,7 +6,7 @@
   const results = document.querySelector("#results");
   const restart = document.querySelector("#restart");
   const restartButton = document.querySelector(".resetBtn");
-  const endGame = document.querySelector("#endGame")
+  const endGame = document.querySelector("#endGame");
   
   // Buttons 
   buttons.forEach((button) => {
@@ -85,11 +85,11 @@
     if (userScore === 5) {
       endGameBanner();
       results.textContent = "Congratulations! You win!!!";
-      restart.textContent = "Please click on reset to restart the game.";
+      restart.textContent = "Please click on Play Again to restart the game.";
     } else if (computerScore === 5) {
       endGameBanner();
        results.textContent = "Sorry, you lost.";
-       restart.textContent = "Please click on reset to restart the game.";
+       restart.textContent = "Please click on Play Again to restart the game.";
     }
   }
 
